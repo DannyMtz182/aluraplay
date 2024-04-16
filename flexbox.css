@@ -1,0 +1,140 @@
+.cabecera__container{
+    display: flex;
+    align-items: center; /*alinea items*/
+    justify-content: space-between; /*espacio entre items*/
+    position: fixed; /*posición fija*/
+    top: 0;
+}
+
+.cabecera__buscar__item{
+    display: none;
+}
+
+.superior__seccion__container{
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /*elimina el espacio en blanco*/
+    overflow: scroll; /*agrega barra de scroll*/
+    gap: 15px;
+}
+
+.menu__container{
+    position: fixed;
+    bottom: 0%;
+    height: 75px;
+    width: 100%;
+}
+
+.menu__lista{
+    display: flex;
+    /* align-self: center; */
+    justify-content: space-around; /* los elementos tendrán una separación entre ellos */
+    height: 100%;
+}
+
+.menu__lista li{
+    align-self: center; /* los elementos se alinean automaticamente según el espacio de su contenedor */
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display:none;
+}
+
+.rodapie__container{
+    display: flex;
+   /*  flex-direction: column; /* alinea en columna */
+    flex-flow: column wrap;
+  /*   flex-wrap: wrap; /* agr/*upa el contenido de una manera flexible, dependiendo de las necesidades */
+}
+
+
+.videos__container{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.videos__item{
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+}
+
+@media (min-width: 834px) {
+
+    .cabecera__buscar__item{
+        display: block;
+    }
+
+    .rodapie__container{
+        justify-content: space-between;
+    }
+    
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+    }
+}
+
+
+@media (min-width:1440px ){
+
+    .menu__container{
+        width: 239px;
+        overflow: scroll;
+
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+    }
+
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+    .videojuegos{
+        order: 3;
+    }
+
+    .peliculas{
+        order: 2;
+    }
+
+    .premium{
+        order: 1;
+    }
+    .menu__itens{
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+
+
+   
+}
+
